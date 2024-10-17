@@ -485,8 +485,8 @@ class ScalarLinearOperator(SymmetricLinearOperator, InvertibleLinearOperator):
         return y / self.scalar
     
     def inverse_LinearOperator(self):
-        if self.scalar == 0:
-            raise ValueError("The scalar is zero, so the inverse does not exist.")
+        # if self.scalar == 0:
+            # raise ValueError("The scalar is zero, so the inverse does not exist.")
         return ScalarLinearOperator(1/self.scalar)
     
     def sqrt_LinearOperator(self):
